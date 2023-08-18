@@ -13,7 +13,8 @@ line_status::line_status(uint8_t _pin[5]) {
 }
 
 void line_status::updateLineStatus() {
-    for (auto i = 0; i < 5; i++) status[i] = digitalRead(pin[i]);
+    for (auto i = 0; i < 5; i++) 
+        status[i] = digitalRead(pin[i]);
 }
 
 int8_t line_status::getError() {

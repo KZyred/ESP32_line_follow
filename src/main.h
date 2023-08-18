@@ -6,10 +6,9 @@
 #include <PIDcontroller.h>
 #include <line_status.h>
 
-#define BASE_PWM 300
-#define KP 35
-#define KI 0
-#define KD 15
-
+#define BASE_PWM 300    // xung PWM cơ sở
+#define KP 35           // hệ số tỉ lệ
+#define KI 0            // độ lợi tích phân
+#define KD 15           // độ lợi vi phân
 
 #endif

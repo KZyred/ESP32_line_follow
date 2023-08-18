@@ -28,7 +28,7 @@ ESP32_line_follow/
 │   ├── Line_status/
 │   │   ├── line_status.h: Defines the class to manage infrared line sensor status.
 │   │   └── line_status.cpp
-│   └── PID_controler/
+│   └── PID_controller/
 │       ├── PIDcontroller.h: Defines the class for the PID controller.
 │       └── PIDcontroller.cpp
 ├── src/
