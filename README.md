@@ -1,4 +1,4 @@
-# Line Follow Robot with ESP32
+# Line Follow Robot with ESP32 (by SGT)
 
 Welcome to the Line Follow Robot repository, where we've developed a simple line-following robot using an ESP32 microcontroller. This robot employs 5 infrared sensors to track lines on the ground. The core control algorithm leverages a PID controller, enabling the robot to follow lines with precision.
 
