@@ -1,6 +1,6 @@
 # Line Follow Robot with ESP32
 
-Welcome to the Line Follow Robot repository, where we've developed a simple line-following robot using an ESP32 microcontroller. This robot employs 5 infrared sensors to track lines on the ground. The core control algorithm leverages a PID controller, enabling the robot to follow lines with precision.
+This repository contains the code for a simple line-following robot using an ESP32 microcontroller. The robot utilizes 5 infrared sensors to detect and follow lines on the ground. The control algorithm is based on a Proportional-Integral-Derivative (PID) controller, allowing precise line-following behavior.
 
 ## Hardware Components
 
@@ -12,7 +12,7 @@ Welcome to the Line Follow Robot repository, where we've developed a simple line
 
 ## Algorithm
 
-The line-following algorithm is powered by a Proportional-Integral-Derivative (PID) controller. The PID controller dynamically adjusts motor PWM signals based on error calculations from sensor readings, thus ensuring the robot stays on its intended path.
+The line-following algorithm is implemented using a PID controller. The PID controller adjusts the motor PWM signals based on the error calculated from the sensor readings, helping the robot stay on the desired path.
 
 ## Development Environment
 
@@ -20,43 +20,47 @@ The code for this project was developed using PlatformIO on Visual Studio Code.
 
 ## Project Structure
 
-The project is structured as follows:
-
 - **lib/**
   - **ESP32_Motor_Controller/**
-    - **esp32_motor.h:** Header file defining the `esp32_motor` class for controlling motors using ESP32's LEDC module.
+    - `esp32_motor.h`: Defines the class for controlling motors using the ESP32's LEDC module.
+
   - **Line_status/**
-    - **line_status.h:** Header file defining the `line_status` class to manage the status of infrared line sensors.
+    - `line_status.h`: Defines the class to manage infrared line sensor status.
+
   - **PID_controler/**
-    - **PIDcontroller.h:** Header file defining the `PIDcontroller` class for the PID controller.
+    - `PIDcontroller.h`: Defines the class for the PID controller.
+
 - **src/**
-  - **main.cpp:** Main code file for initializing motors, sensors, and PID controller. Handles line-following logic.
+  - `main.cpp`: The main code that initializes motors, sensors, and PID controller.
 
-## Folders Descriptions
+- `main.h`: Contains constants and configurations used throughout the project.
 
-### ESP32_Motor_Controller
-This library encapsulates motor control for the ESP32 microcontroller. The `esp32_motor.h` header file defines the `esp32_motor` class, which provides methods for running, stopping, and configuring motors.
+## Components and Descriptions
 
-### Line_status
-The `line_status` library manages the status of infrared line sensors. The `line_status.h` header file defines the `line_status` class, including methods for updating sensor status and calculating line position error.
+### ESP32_Motor_Controller (`esp32_motor.h`)
 
-### PID_controller
-This library handles the PID controller. The `PIDcontroller.h` header file defines the `PIDcontroller` class, which calculates PID output based on error values.
+The `esp32_motor.h` file defines a class for controlling motors using the ESP32's LEDC module. It provides methods to set up motor control and to run the motors at specific PWM values or stop them.
 
-## Code Components
+### Line_status (`line_status.h`)
 
-### esp32_motor.h
-This header file defines the `esp32_motor` class, allowing control of motors using the ESP32's LEDC module. It includes methods for running, stopping, and configuring motors.
+The `line_status.h` file defines a class that manages the status of the infrared line sensors. It provides methods to update sensor status and calculate the line position error based on the sensor readings.
 
-### line_status.h
-This header file defines the `line_status` class, used to manage infrared line sensor status. It provides methods to update sensor status and calculate the line position error.
+### PID_controller (`PIDcontroller.h`)
 
-### PIDcontroller.h
-This header file defines the `PIDcontroller` class for the PID controller. It calculates the PID output based on error values.
+The `PIDcontroller.h` file defines a class for the PID controller. It contains PID constants and methods to calculate the PID output.
 
-## platformio.ini
-The `platformio.ini` file configures the PlatformIO environment for the ESP32 project. It specifies the target board, platform, framework, and upload speed.
+### `main.cpp`
+
+This main code file initializes the motors, sensors, and PID controller. It continuously reads sensor data, calculates the PID output, and controls the motors to follow the line.
+
+### `main.h`
+
+The `main.h` file contains constants and configurations used throughout the project, such as base PWM, PID controller constants (KP, KI, KD), and more.
+
+## `platformio.ini`
+
+The `platformio.ini` file specifies configuration settings for the PlatformIO environment. It defines the platform, board, framework, and upload speed for the project.
 
 ---
 
-For more detailed explanations, please refer to the individual code files, headers, and comments within.
+For more detailed information about individual components and their functions, please refer to the respective code files and comments within.
