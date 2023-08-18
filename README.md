@@ -22,7 +22,7 @@ The code for this project was developed using PlatformIO on Visual Studio Code.
 
 ESP32_line_follow/
 ├── lib/
-│   ├── ESP32_Motor_Controller/ (`esp32_motor.h`: Defines the class for controlling motors using the ESP32's LEDC module.)
+│   ├── ESP32_Motor_Controller/
 │   │   ├── esp32_motor.h
 │   │   └── esp32_motor.cpp
 │   ├── Line_status/
