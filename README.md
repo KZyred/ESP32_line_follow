@@ -19,22 +19,23 @@ The line-following algorithm is powered by a Proportional-Integral-Derivative (P
 The code for this project was developed using PlatformIO on Visual Studio Code.
 
 ## Project Structure
-
+```
 ESP32_line_follow/
 ├── lib/
-│   ├── ESP32_Motor_Controller/
-│   │   ├── esp32_motor.h
+│   ├── ESP32_Motor_Controller/ (`esp32_motor.h`: Defines the class for controlling motors using the ESP32's LEDC module.)
+│   │   ├── esp32_motor.h 
 │   │   └── esp32_motor.cpp
-│   ├── Line_status/
+│   ├── Line_status/ (`line_status.h`: Defines the class to manage infrared line sensor status.)
 │   │   ├── line_status.h
 │   │   └── line_status.cpp
-│   └── PID_controler/
+│   └── PID_controler/ (`PIDcontroller.h`: Defines the class for the PID controller.)
 │       ├── PIDcontroller.h
 │       └── PIDcontroller.cpp
 ├── src/
-│   ├── main.cpp
-│   └── main.h
+│   ├── main.cpp    (The main code that initializes motors, sensors, and PID controller.)
+│   └── main.h      (Contains constants and configurations used throughout the project.)
 └── platformio.ini
+```
 
 ## Folders Descriptions
 
