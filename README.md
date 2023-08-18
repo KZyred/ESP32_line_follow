@@ -25,10 +25,10 @@ The project is structured as follows:
 - **lib/**
   - **ESP32_Motor_Controller/**
     - **esp32_motor.h:** Header file defining the `esp32_motor` class for controlling motors using ESP32's LEDC module.
-- **Line_status/**
-  - **line_status.h:** Header file defining the `line_status` class to manage the status of infrared line sensors.
-- **PID_controler/**
-  - **PIDcontroller.h:** Header file defining the `PIDcontroller` class for the PID controller.
+  - **Line_status/**
+    - **line_status.h:** Header file defining the `line_status` class to manage the status of infrared line sensors.
+  - **PID_controler/**
+    - **PIDcontroller.h:** Header file defining the `PIDcontroller` class for the PID controller.
 - **src/**
   - **main.cpp:** Main code file for initializing motors, sensors, and PID controller. Handles line-following logic.
 
